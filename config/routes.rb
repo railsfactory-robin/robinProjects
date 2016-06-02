@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'home', to: 'home#main'
   get 'homepage', to: 'home#homepage'
+  get 'signup', to: 'home#signup'
+  post 'register', to: 'home#register'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require angular.min
 //= require angular-route
+//= require ngStorage.min
  //= require_tree .

@@ -1,29 +1,19 @@
-var app = angular.module('sampleApp',['ngRoute'])
-/*app.config(function($routeProvider,$locationProvider) {
+var app = angular.module('sampleApp',['ngRoute','ngStorage'])
+app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
 	$routeProvider
-        // route for the home page
-        .when('/homepage', {
-        	templateUrl : 'homepage.html.erb',
-        	controller  : 'applicationCntrl'
-        }); 
-         $locationProvider.html5Mode({
-        	enabled: true,
-        	requireBase: false
-        });
-    });
-    */
-    app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
-    	$routeProvider
-    	.when('/homepage', {
-    		templateUrl: 'homepage.html.erb',
-    		controller: 'applicationCntrl',
-    		reloadOnSearch: false
-    	})
-    	.otherwise({
-    		redirectTo: '/'
-    	});
-    	$locationProvider.html5Mode({
-    		enabled: false,
-    		requireBase: false
-    	});
-    }]);
+	.when('/homepage', {
+		templateUrl: 'homepage.html.erb',
+		controller: 'homecntrl',
+ 	})
+	.when('/signup', {
+		templateUrl: 'signup.html.erb',
+		controller: 'applicationCntrl',
+ 	})
+	.otherwise({
+		redirectTo: '/'
+	});
+	$locationProvider.html5Mode({
+		enabled: false,
+		requireBase: false
+	});
+}]);

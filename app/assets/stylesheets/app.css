@@ -124,7 +124,7 @@ body{ background:#f8f8f8; float:left;font-family: 'playfair_displayregular';  wi
 #logo{float: left; margin-top: -16px;}
 
 /******************************header css start***********************************/
-.header{ background:#FFF;padding-top:30px; float:left; width:100%;}
+.header{ background:#FFF;padding-top:30px;width:100%;}
 
 ul.mainNavigation{ margin:0; padding:0; float:right;}
 ul.mainNavigation li a{    font-family: 'playfair_displayregular'; font-size:17px; color:#515355; margin:0;
@@ -134,7 +134,7 @@ ul.mainNavigation li a:hover{ border-bottom:3px solid #243960; background:#FFF; 
 ul.mainNavigation li.active a{ border-bottom:3px solid #243960;}
 .marginBottom{ margin-bottom:0 !important; }
 .paddingTop{ padding-top:0 !important; }
-.banner{ width:100%; float:left; position:relative;}
+.banner{ width:100%; position:relative;}
 .banner img{ width:100%;}
 .bannerText{ position:absolute; bottom:48px;}
 .bannerText h2{ background:url(../assets/transparent-black-bg.png) repeat; font-size:60px;font-family: 'playfair_displayitalic'; color:#FFF;padding: 18px 38px 25px;display:inline-block; margin:0;}
@@ -144,8 +144,7 @@ ul.mainNavigation li.active a{ border-bottom:3px solid #243960;}
 
 /******************************content css start***********************************/
 
-.content{ float: left;
-    padding-top: 60px;
+.content{ padding-top: 60px;
     width: 100%;}
 .about p{  font-family: 'open_sansregular';font-size:15px; line-height:20px; color:#515355;  }
 .about h2{ font-family: 'MyriadPro'; color:#515355;}
@@ -217,4 +216,15 @@ input::-webkit-input-placeholder {
 	margin-left: 26px;
 	margin-top: 5px;
 	display: block;
+}
+.footer{
+    min-height: 80px;
+    background-color: #777;
+    margin-top: 10px;
+    text-align: center;
+}
+.footer .fist-line{
+    padding-top:2%;
+    color: white;
+    font-size: 16px;
 }

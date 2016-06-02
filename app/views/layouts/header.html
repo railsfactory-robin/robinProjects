@@ -1,5 +1,4 @@
-<div ng-controller="homecntrl">
-	<!--Header HTML Starts Here-->
+<!--Header HTML Starts Here-->
   <header class="header">
     <div class="container">
       <div class="row">
@@ -15,11 +14,11 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <nav>
                   <ul class="nav navbar-nav mainNavigation">
-                    <li class="active"><a href="" ng-click="homePath()">Home </a></li>
+                    <li class="active"><a ng-href="/homepage">Home </a></li>
                     <li><a href="javascript:void(0)"> About Us </a></li>
                     <li><a href="javascript:void(0)">Services </a></li>
-                    <li><a href="javascript:void(0)">{{user.firstname | uppercase}} {{user.lastname | uppercase}}</a></li>
-                    <li><a href="javascript:void(0)">Logout</a></li>
+                    <li><a href="javascript:void(0)"> Why Choose Us </a></li>
+                    <li><a href="javascript:void(0)">Contact Us </a></li>
                   </ul>
                 </nav>
               </div>
@@ -28,7 +27,7 @@
         </div>
       </div>
     </div>
-    <section class="banner"><img src="assets/3.jpg" alt="" class="img-responsive">
+    <section class="banner"><img src="assets/banner_02.jpg" alt="" class="img-responsive">
       <div class="container">
         <div class="bannerText">
           <div class="row">
@@ -46,25 +45,3 @@
     </section>
   </header>
   <!--Header HTML Ends Here--> 
-   <div style="margin:2%;width:48%">
-  	<h2>User Details</h2>
-  	<table class="table defult">
-  		<tr>
-  		<th>Sl.No</th>
-  		<th>Firstname</th>
-  		<th>Lastname</th>
-  		<th>Email Address</th>
-  		<th>Phone Number</th>
-  		</tr>
-  		<tr>
-  			<td>1</td>
-  			<td>{{user.firstname}}</td>
-  			<td>{{user.lastname}}</td>
-  			<td>{{user.email}}</td>
-  			<td>{{user.phone}}</td>
-  		</tr>
-  	</table>
-  </div>
-
-   
-</div>

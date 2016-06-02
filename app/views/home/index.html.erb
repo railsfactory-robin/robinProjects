@@ -1,5 +1,5 @@
 <div class="home-first" ng-controller="applicationCntrl"> 
-  <!--Header HTML Starts Here-->
+ <!--Header HTML Starts Here-->
   <header class="header">
     <div class="container">
       <div class="row">
@@ -15,7 +15,7 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <nav>
                   <ul class="nav navbar-nav mainNavigation">
-                    <li class="active"><a href="/homepage">Home </a></li>
+                    <li><a ng-click="homePage()">Home </a></li>
                     <li><a href="javascript:void(0)"> About Us </a></li>
                     <li><a href="javascript:void(0)">Services </a></li>
                     <li><a href="javascript:void(0)"> Why Choose Us </a></li>
@@ -46,8 +46,7 @@
     </section>
   </header>
   <!--Header HTML Ends Here--> 
-<div></div>
-  <!-- Content HTML Starts Here-->
+   <!-- Content HTML Starts Here-->
   <section class="content">
     <div class="container">
       <div class="row">
@@ -64,51 +63,49 @@
             </div>
             <div class="main-login main-center">
               <form class="form-horizontal" name="loginForm" novalidate>
-
-                <div class="form-group">
-                  <label for="username" class="cols-sm-2 control-label">Username</label>
-                  <div class="cols-sm-10">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username" ng-model="user.username" required />
-                    </div>
-                    <span class="error login-err" ng-show="loginForm.username.$touched && loginForm.username.$error.required">Username is required</span>
+               <div class="form-group">
+               <span style="color:red" ng-show="loginerror">Error: Invalid Username or Password</span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="cols-sm-2 control-label">Email</label>
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your email" ng-model="user.email" required />
                   </div>
+                  <span class="error login-err" ng-show="(loginForm.email.$touched || submitted) && loginForm.email.$error.required">Email is required</span>
                 </div>
+              </div>
 
-                <div class="form-group">
-                  <label for="password" class="cols-sm-2 control-label">Password</label>
-                  <div class="cols-sm-10">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                      <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" ng-model="user.password" required/>
-                    </div>
-                     <span class="error login-err" ng-show="loginForm.password.$touched && loginForm.password.$error.required">Password is required</span>
+              <div class="form-group">
+                <label for="password" class="cols-sm-2 control-label">Password</label>
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <input type="password" class="form-control" name="password" id="`"  placeholder="Enter your Password" ng-model="user.password" required/>
                   </div>
+                  <span class="error login-err" ng-show="(loginForm.password.$touched || submitted )&& loginForm.password.$error.required">Password is required</span>
                 </div>
+              </div>
 
-                <div class="form-group ">
-                  <button type="button" class="btn btn-primary btn-lg btn-block login-button" ng-click="login(user);">Login</button>
-                </div>
-                <div class="login-register">
-                  <a>Signup</a>
-                </div>
-              </form>
-            </div>
+              <div class="form-group ">
+                <button type="button" class="btn btn-primary btn-lg btn-block login-button" ng-click="login(user);">Login</button>
+              </div>
+              <div class="login-register">
+                <a href="" ng-click="signupPath()">Signup</a>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--Content HTML Ends Here--> 
+  <!--Content HTML Ends Here--> 
 
-    <!-- Footer  HTML Starts Here-->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          this is a footer
-        </div>
-      </div>
-    </footer>
-    <!-- Footer HTML Ends Here-->
-  </div>
+  <!-- Footer  HTML Starts Here-->
+  <footer class="footer">
+  <p class="fist-line">Robin Thomas</p>
+  </footer>
+  <!-- Footer HTML Ends Here-->
+</div>
