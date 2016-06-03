@@ -1,0 +1,70 @@
+<div ng-controller="homecntrl">
+	<!--Header HTML Starts Here-->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-md-4"><a id="logo" href="index.html"><img src="assets/logo.jpg" class="img-responsive" alt="" title="wordpress"></a> </div>
+        <div class="col-xs-12 col-sm-9 col-md-8">
+          <!--<div class="topPhone pull-right"><p>+1-9876543210</p></div>-->
+          <div class="clearfix"></div>
+          <nav class="navbar marginBottom">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <nav>
+                  <ul class="nav navbar-nav mainNavigation">
+                    <li class="active"><a href="" ng-click="homePath()">Home </a></li>
+                    <li><a href="javascript:void(0)"> About Us </a></li>
+                    <li><a href="javascript:void(0)">Services </a></li>
+                    <li><a href="javascript:void(0)">{{user.firstname | uppercase}} {{user.lastname | uppercase}}</a></li>
+                    <li><a href="javascript:void(0)">Logout</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <section class="banner"><img src="assets/3.jpg" alt="" class="img-responsive">
+      <div class="container">
+        <div class="bannerText">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>build an empire</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!--Header HTML Ends Here--> 
+   <div style="margin:2%;width:48%">
+  	<h2>User Details</h2>
+  	<table class="table defult">
+  		<tr>
+  		<th>Sl.No</th>
+  		<th>Firstname</th>
+  		<th>Lastname</th>
+  		<th>Email Address</th>
+  		<th>Phone Number</th>
+  		</tr>
+  		<tr>
+  			<td>1</td>
+  			<td>{{user.firstname}}</td>
+  			<td>{{user.lastname}}</td>
+  			<td>{{user.email}}</td>
+  			<td>{{user.phone}}</td>
+  		</tr>
+  	</table>
+  </div>
+
+   
+</div>

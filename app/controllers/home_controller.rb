@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   skip_before_filter  :verify_authenticity_token, only: [:register]
   def index
-   end
+  end
 
   def main
   	# @user = User.new
@@ -9,11 +9,11 @@ class HomeController < ApplicationController
   	@user = User.authenticate_user params
   	render json: {user: @user}
   end
-   def homepage
- 
+  def homepage
+     
   end
   def signup
- 
+
   end
   def register
     @user = User.new(user_params)

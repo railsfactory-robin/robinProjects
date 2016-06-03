@@ -5,10 +5,10 @@ app.controller('homecntrl', function($scope,$http,$location,$window,$localStorag
 		$scope.user = $localStorage.user;
 	};
 	$scope.homePage = function(){
-		window.location.href = "/";
+		$location.path('/')
 	}
 	$scope.homePath = function(){
- 		window.location.href = "/homepage";
+ 		$location.path('/')
 	}
 
 	$scope.initilize();

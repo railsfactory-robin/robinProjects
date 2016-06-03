@@ -4,10 +4,10 @@ app.controller('applicationCntrl', function($scope,$http,$location,$window,$loca
 		
 	};	
 	$scope.homePage = function(){
- 		window.location.href = "/";
+ 		$location.path('/')
 	}
 	$scope.signupPath = function(){
-		window.location.href = "/signup";
+		$location.path('/signup')
 	}
 	$scope.login = function(user){
 		$scope.submitted = true;
@@ -22,7 +22,7 @@ app.controller('applicationCntrl', function($scope,$http,$location,$window,$loca
 				if (data.user.email) {
  					$scope.user = data.user;
 					$localStorage.user = $scope.user;
-					window.location.href = "/homepage";
+					$location.path("/homepage")
 				}else{
  					$scope.loginerror = true;
 				}
@@ -45,7 +45,7 @@ app.controller('applicationCntrl', function($scope,$http,$location,$window,$loca
 				if (data.user.email) {
  					$scope.user = data.user;
 					$localStorage.user = $scope.user;
-					window.location.href = "/homepage";
+					$location.path("/homepage")
 				}else{
  					$scope.loginerror = true;
 				}
