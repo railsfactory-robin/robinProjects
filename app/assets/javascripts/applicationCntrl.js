@@ -9,6 +9,12 @@ app.controller('applicationCntrl', function($scope,$http,$location,$window,$loca
 	$scope.signupPath = function(){
 		$location.path('/signup')
 	}
+	$scope.aboutus = function(){
+		$location.path('/aboutus')
+	}
+	$scope.contactus = function(){
+		$location.path('/contactus')
+	}
 	$scope.login = function(user){
 		$scope.submitted = true;
   		if ($scope.loginForm.$valid) {

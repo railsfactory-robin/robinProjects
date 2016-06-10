@@ -13,6 +13,14 @@ app.config(['$routeProvider','$locationProvider', function ($routeProvider, $loc
 		templateUrl: 'templates/signup.html.erb',
 		controller: 'applicationCntrl',
  	})
+ 	.when('/aboutus', {
+		templateUrl: 'templates/aboutus.html.erb',
+		controller: 'applicationCntrl',
+ 	})
+ 	.when('/contactus', {
+		templateUrl: 'templates/contactus.html.erb',
+		controller: 'applicationCntrl',
+ 	})
 	.otherwise({
 		redirectTo: '/'
 	});
